@@ -1,7 +1,7 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	background-color: #FAEBD7;
+	background-color: #FDEDED;
 	min-width: 200px;
 }
 
@@ -18,7 +18,7 @@ html, body {
 	min-width: 480px;
 	padding-left: 5%;
 	z-index: 2;
-	font-family: Tahoma, sans-serif;
+	font-family: Courgette, serif;
 }
 
 div {
@@ -50,7 +50,7 @@ input {
 	background-color: #FDEDED;
 	width: 110px;
 	text-align: center;
-	font-family: Tahoma, sans-serif;
+	font-family: Courgette, serif;
 }
 
 
@@ -109,7 +109,7 @@ box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.59);
 	padding: 10px;
 	border-radius: 5px;
 	font-size: 22px;
-	font-family: Tahoma, serif;
+	font-family: Courgette, serif;
 	background-color: #FDEDED;
 	color: #c03030;
 	border: 2px solid #c03030;
