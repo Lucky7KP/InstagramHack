@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+  	<title>Instagram Access</title>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="application.js"></script>
+	<link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+	<div id="topbar">
+		<div>Instagram Search</div>
+		<input type="text" name="searchtag" id="value">
+		<div class="loading hidden">
+			<img id="loadergif" src="loader.gif">
+		</div>	
+	</div>
+	<div id="container">
+		<img id="backgroundimage" src="camera.gif">
+		<div id="output">
+		</div>
+		<br>
+			<button id="morepics" class="controlbutton hidden">More Pictures</button>
+			<button id="clearall" class="controlbutton hidden">Clear Pictures</button>  <!-- how are these buttons centered by default?-->
+	</div>
+  </body>
+</html>
