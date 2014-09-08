@@ -27,7 +27,7 @@ $(document).ready(function() {
 				$('.controlbutton').removeClass('hidden');
 				for (var i = 0; i < pic.data.length; i++) {
 					likes = pic.data[i].likes.count;
-				
+					link = pic.data[i].link;
 					urlsrc = pic.data[i].images.thumbnail.url;
 					$("#output").append("<div id='outputpic'><a target='_blank' href='" + link + "'><div id='imgStyle'></div><img src='" + urlsrc + "'></img></div>");
 				}  
