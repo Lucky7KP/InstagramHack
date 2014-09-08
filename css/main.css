@@ -1,24 +1,24 @@
 html, body {
 	height: 100%;
 	width: 100%;
-	background-color: #FDEDED;
+	background-color: #FFEFDB;
 	min-width: 200px;
+	font-family: Tahoma, sans-serif;
 }
 
-/* COLUMNS */
+/* Layout */
 #topbar {
 	display: inline-block;
 	position: fixed;
 	width: 100%;
-	height: 35px;
-	background-color: #c03030;
+	height: 60px;
+	background-color: #000000;
 	font-size: 22px;
-	padding-top: 6px;
+	padding-top: 25px;
 	color: #FFF;
 	min-width: 480px;
 	padding-left: 5%;
-	z-index: 2;
-	font-family: Tahoma, sans-serif;
+	z-index: 2;	
 }
 
 div {
@@ -29,60 +29,66 @@ div {
 	display: inline-block;
 }
 
-.loading {
-    display: inline-block;
-	position: absolute;
-	margin-left: 5px;
-	margin-top: 4px;
-   }
-
-#loadergif {
-	display: inline-block;
-	width: 22px;
-	height: 22px;
-}
-
 input {
 	font-size: 20px;
 	border: none;
 	border-radius: 4px;
-	color: #FFF;
-	background-color: #FDEDED;
-	width: 110px;
+	color: #000000;
+	background-color: #FFEFDB;
+	width: 300px;
 	text-align: center;
-	font-family: Tahoma, sans-serif;
 }
 
-
 input:focus {
-	background-color: #EE8181;
+	background-color: #EEDFCC;
 	border: none;
 	outline: none;
 }
 
 #backgroundimage {
 	position: fixed;
-	width: 250px;
-	height: 250px;
-	top: 50%;
-	left: 50%;
+	width: 400px;
+	height: 350px;
+	top: 45%;
+	left: 45%;
 	margin-top: -125px;
 	margin-left: -125px;
+}
+
+#headerimage {
+	position: fixed;
+	width: 35px;
+	height: 35px;
+	padding-left: 25px;
 }
 
 #container {
 	position: relative;
 	display: inline-block;
 	text-align: center;
-	margin-top: 75px;
+	margin-top: 110px;
 	margin-right: 5%;
 	margin-left: 5%;
 	z-index: 1;
 }
 
+footer {
+	width: 100%;
+	height: 15px;
+	background-color: #000000;
+	bottom: 0;
+	position: fixed;
+	padding-top: 10px;
+}
 
-/* PICTURES*/
+.subtitle {
+	font-size: 14px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
 
+
+/* Pictures*/
 #output div {
 	display: inline-block;
 }
@@ -91,59 +97,40 @@ input:focus {
 	display: inline-block;
 }
 
-#output img {
--webkit-box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.59);
--moz-box-shadow:    2px 2px 10px 0px rgba(50, 50, 50, 0.59);
-box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.59);
-}
-
-.hidden {
-	display: none;
-}
-
-/* BUTTONS AND LIKES*/
-.controlbutton {
-	position: relative;
-	margin: 30px 10px 10px 10px;
-	text-align: center;
-	padding: 10px;
-	border-radius: 5px;
-	font-size: 22px;
-	font-family: Tahoma, sans-serif;
-	background-color: #FDEDED;
-	color: #c03030;
-	border: 2px solid #c03030;
-}
-
-.controlbutton:hover {
-	background-color: #c03030;
-	color: #FDEDED;
-}
-
-
-#stardiv {
-	background: url('star-icon.png') no-repeat;
+#imgStyle {
 	width: 64px;
 	height: 64px;
 	left: 32px;
 	bottom: 9px;
 	position: relative;
 	z-index: 0;
-	text-align: center;
 }
 
-#likesdiv {
+#output img {
+-webkit-box-shadow: 2px 2px 10px 0px rgba(50, 50, 50, 0.59);
+-moz-box-shadow:    2px 2px 10px 0px rgba(50, 50, 50, 0.59);
+box-shadow:         2px 2px 10px 0px rgba(50, 50, 50, 0.59);
+margin-bottom: 35px;
+}
+
+.hidden {
+	display: none;
+}
+
+/* Buttons */
+.controlbutton {
 	position: relative;
-	color: #FFF;
-	text-align: left;
-	bottom: -19px;
-	font-size: 12px;
+	margin: 30px 10px 10px 10px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: 14px;
+	background-color: #000000;
+	color: #FFFFFF;
 }
 
-.likes {
-	position: absolute;
-	left: 26px;
-	top: 19px;
-	color: #FFF;
-	text-align: left;
+.controlbutton:hover {
+	background-color: #F87531;
+	color: #FFFFFF;
 }
+

@@ -3,15 +3,17 @@ $(document).ready(function() {
 	var min='',
 	url='',
 
-	instagram = {                                     //credentials stored in object
+//Instagram access info 
+	instagram = {                                     
 		clientID: '03dfcae06e944df4a0e54fad2c3abcab',
 		apiHost: 'https://api.instagram.com',
 	}
 
-	function loadInstagrams() {                      //where the magin begins
-		$('.loading').removeClass('hidden');
+//Load images from Instagram
+	function loadInstagrams() {                      
 		$('#backgroundimage').addClass('hidden');
-		tag = $('input').val();
+		$('.subtitle').removeClass('hidden');
+ 		tag = $('input').val();
 		$.ajax({
 			type: "GET",
 			dataType: "jsonp",
@@ -23,44 +25,39 @@ $(document).ready(function() {
 				url = pic.pagination.next_url;
 				$('.loading').addClass('hidden');
 				$('.controlbutton').removeClass('hidden');
-				console.dir(pic);
 				for (var i = 0; i < pic.data.length; i++) {
 					likes = pic.data[i].likes.count;
-					console.log(likes);
-					link = pic.data[i].link;
+				
 					urlsrc = pic.data[i].images.thumbnail.url;
-					$("#output").append("<div id='outputpic'><a target='_blank' href='" + link + "'><div id='stardiv'><div id='likesdiv'>" + likes + "</div></div><img src='" + urlsrc + "'></img></div>");
+					$("#output").append("<div id='outputpic'><a target='_blank' href='" + link + "'><div id='imgStyle'></div><img src='" + urlsrc + "'></img></div>");
 				}  
-	        }      // <img src='star-icon.png' class='staricon'>
-
+	        }      
 	    });
 	}
 
-	 $('#morepics').on('click', function() {         //load more pictures on button click
+//Load more pictures when button is clicked
+	 $('#morepics').on('click', function() {         
 	 	loadInstagrams();
 	 })
 
-	 $('#clearall').on('click', function() {         //clears all pics, restores logo, removes buttons, focuses on input field
+//Clear pictures, resets page when button is clicked
+	 $('#clearall').on('click', function() {        
 	 	$('#output').empty();
 	 	$('#backgroundimage').removeClass('hidden');
 	 	$('.controlbutton').addClass('hidden');
 	 	$('input').val('');
 	 	$('input').focus();
 	 })
-	 
-	$('input').on('click focusin', function() {      //removes input value on focus
+
+//Removes input value on focus	 
+	$('input').on('click focusin', function() {      
 		this.value = '';
 	});
 
-	$('input').on('blur', function() {               //hides loader GIF when focus off of input. 
-		$('.loading').addClass('hidden');		     //a fix for an undesirable effect. loader gif spins when content of input deleted
-	})
-
-	var timerid;                                     //automatically submit input after time delay
+//Automatically submit input after time delay
+	var timerid;                                     
 	$('input').keyup(function() {
 		clearTimeout(timerid);
 		timerid = setTimeout(function() { loadInstagrams(); }, 500);
 	});
-
-
 });

@@ -2,28 +2,29 @@
 <html lang="en">
   <head>
   	<title>Instagram API Hack</title>
-  	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script type="text/javascript" src="js/app.js"></script>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/main.css">
+  		<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
   </head>
   <body>
 	<div id="topbar">
-		<div>Instagram Search</div>
-		<input type="text" name="searchtag" id="value">
-		<div class="loading hidden">
-			<img id="loadergif" src="loader.gif">
-		</div>	
+		<div>Search Instagram:  </div>
+		<input type="text" name="searchtag" id="value" placeholder="Enter your Request">
+		<img id="headerimage" src="images/logo.png">
 	</div>
 	<div id="container">
-		<img id="backgroundimage" src="camera.gif">
+		<p class="subtitle hidden">Click on the photos below to see more information in  Instagram.</p>
+		<img id="backgroundimage" src="images/polaroids.gif">
 		<div id="output">
 		</div>
-		<br>
-			<button id="morepics" class="controlbutton hidden">More Pictures</button>
-			<button id="clearall" class="controlbutton hidden">Clear Pictures</button>  <!-- how are these buttons centered by default?-->
+		<br />
+		<button id="morepics" class="controlbutton hidden">More Pictures</button>
+		<button id="clearall" class="controlbutton hidden">Clear Pictures</button>  
 	</div>
+	<footer>
+	</footer>
   </body>
 </html>
